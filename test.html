@@ -1,0 +1,230 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Display Picture</title>
+  <style>
+    #imageContainer {
+      display: none;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <button id="showImageButton">Show Picture</button>
+  <div id="imageContainer">
+    <img src="asset/images/Certificate.png" alt="Sample Image" />
+  </div>
+
+  <script>
+    const button = document.getElementById('showImageButton');
+    const imageContainer = document.getElementById('imageContainer');
+
+    button.addEventListener('click', () => {
+      imageContainer.style.display = 'block';
+    });
+  </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Image</title>
+  <style>
+    /* Style for the popup image container */
+    .popup-container {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .popup-image {
+      max-width: 90%;
+      max-height: 90%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 10%;
+      right: 10%;
+      background: #fff;
+      border: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .close-button:hover {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <button id="toggleButton">Show Image</button>
+
+  Popup Container -->
+  <!-- <div id="popupContainer" class="popup-container">
+    <button class="close-button" id="closeButton">Close</button>
+    <img src="asset/images/Certificate.png" alt="Popup" class="popup-image">
+  </div>
+
+  <script>
+    // JavaScript to handle the popup
+    const toggleButton = document.getElementById('toggleButton');
+    const popupContainer = document.getElementById('popupContainer');
+    const closeButton = document.getElementById('closeButton');
+
+    // Show the popup
+    toggleButton.addEventListener('click', () => {
+      popupContainer.style.display = 'flex';
+    });
+
+    // Hide the popup
+    closeButton.addEventListener('click', () => {
+      popupContainer.style.display = 'none';
+    });
+
+    // Close the popup when clicking outside the image
+    popupContainer.addEventListener('click', (e) => {
+      if (e.target === popupContainer) {
+        popupContainer.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Image</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Button styling */
+        #showImageButton {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px;
+        }
+
+        #showImageButton:hover {
+            background-color: #0056b3;
+        }
+
+        /* Fullscreen popup styling */
+        #popupImage {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #popupImage img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Close button styling */
+        #closeButton {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+        }
+
+        #closeButton:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <button id="showImageButton">Show Image</button>
+
+    <div id="popupImage">
+        <button id="closeButton">&times;</button>
+        <img src="https://via.placeholder.com/800" alt="Popup Image">
+    </div>
+
+    <script>
+        const showImageButton = document.getElementById('showImageButton');
+        const popupImage = document.getElementById('popupImage');
+        const closeButton = document.getElementById('closeButton');
+
+        // Show the popup image
+        showImageButton.addEventListener('click', () => {
+            popupImage.style.display = 'flex';
+        });
+
+        // Hide the popup image
+        closeButton.addEventListener('click', () => {
+            popupImage.style.display = 'none';
+        });
+
+        // Hide the popup image when clicking outside of it
+        popupImage.addEventListener('click', (event) => {
+            if (event.target === popupImage) {
+                popupImage.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
